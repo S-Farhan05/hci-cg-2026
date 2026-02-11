@@ -6,6 +6,23 @@
 
   <!-- Page title shown in browser tab and announced by screen readers -->
   <title>Don Norman – Contact</title>
+  
+  <style>
+    /* Minimal styling allowed in Lab 01 (color + font only) */
+    body { 
+      font-family: Arial, sans-serif; 
+      color: #333;
+    }
+    header {
+      background-color: #f5f5f5;
+    }
+    footer {
+      background-color: #f9f9f9;
+    }
+    label {
+      color: #495057;
+    }
+  </style>
 </head>
 <body>
 
@@ -32,25 +49,39 @@
 
   <!-- Main landmark: primary content of this page -->
   <main>
-    <form action="#" method="post">
-      
-      <!-- Groups related form controls and provides context -->
-      <fieldset>
-        <legend>Send a Message</legend>
+    <section>
+      <h2>Contact Information</h2>
+      <p>Get in touch with Don Norman regarding HCI research and design principles.</p>
+    </section>
+    
+    <section>
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
 
-        <!-- Label explicitly associated with its input -->
-        <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br><br>
+        <!-- Groups related form controls and provides context -->
+        <fieldset>
+          <legend>Message Details</legend>
 
-        <!-- Textarea with clear label for screen readers -->
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+          <!-- Label explicitly associated with its input -->
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name" required><br><br>
 
-        <!-- Submit button is keyboard accessible by default -->
-        <button type="submit">Send</button>
-      </fieldset>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" required><br><br>
 
-    </form>
+          <label for="subject">Subject</label><br>
+          <input type="text" id="subject" name="subject" required><br><br>
+
+          <!-- Textarea with clear label for screen readers -->
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+          <!-- Submit button is keyboard accessible by default -->
+          <button type="submit">Send Message</button>
+        </fieldset>
+
+      </form>
+    </section>
   </main>
 
   <!-- Footer provides supplementary information -->
